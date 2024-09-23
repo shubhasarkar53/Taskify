@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taskify | Task Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="logic.js" defer></script>
+  <script src="https://kit.fontawesome.com/a4453a93c7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Taskify</h1>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Tasks</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="login-signup">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <section class="todo-section">
+      <div class="place-specifier">
+        <h3>To Do</h3>
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <button class="create-todo">
+        <div>Add New</div>
+        <div>+</div>
+      </button>
+      <div class="dropable-area" ondrop="setDroppedElement(event)" ondragover="allowDrop(event)"></div>
+    </section>
+
+    <section class="in-progress-section">
+
+      <div class="place-specifier">
+      <h3>In Progress</h3>
+      <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <button class="create-todo">
+        <div>Add New</div>
+        <div>+</div>
+      </button>
+      <div class="dropable-area" ondrop="setDroppedElement(event)" ondragover="allowDrop(event)"></div>
+
+    </section>
+
+    <section class="under-review-section">
+
+      <div class="place-specifier">
+      <h3>Under Review</h3>
+      <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <button class="create-todo">
+        <div>Add New</div>
+        <div>+</div>
+      </button>
+      <div class="dropable-area" ondrop="setDroppedElement(event)" ondragover="allowDrop(event)"></div>
+
+    </section>
+
+    <section class="finished-section">
+
+      <div class="place-specifier">
+      <h3>Finished</h3>
+      <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <button class="create-todo">
+        <div>Add New</div>
+        <div>+</div>
+      </button>
+      <div class="dropable-area" ondrop="setDroppedElement(event)" ondragover="allowDrop(event)"></div>
+
+    </section>
+
+
+    <div class="todo-modal" id="todoModal">
+      <div class="modal-content">
+        <h2>Add a New Task</h2>
+        <form id="todoForm">
+          <label for="taskTitle">Title:</label>
+          <input type="text" id="taskTitle" name="taskTitle" placeholder="Enter task title" required>
+
+          <label for="taskDescription">Description:</label>
+          <textarea id="taskDescription" name="taskDescription" placeholder="Enter task description"
+            required></textarea>
+
+          <label for="taskDifficulty">Difficulty Level:</label>
+          <select id="taskDifficulty" name="taskDifficulty" required>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+
+          <div class="modal-buttons">
+            <button type="submit" class="create-todo-modal">Create Task</button>
+            <button type="button" class="close-modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+
+
+</body>
+
+</html>
