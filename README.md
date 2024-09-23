@@ -13,11 +13,11 @@
 - Drag and Drop
 ![alt text](image-2.png)
 
-#Features to implement
--Backend
--Authentication
--Landing Page
--Database Integration
+# Features to implement
+- Backend
+- Authentication
+- Landing Page
+- Database Integration
 
 
 
